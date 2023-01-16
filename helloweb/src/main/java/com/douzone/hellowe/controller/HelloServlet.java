@@ -13,10 +13,12 @@ public class HelloServlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String id = request.getParameter("id");
+		
 		response.setContentType("text/html; charset=utf-8");
 		PrintWriter pw = response.getWriter();
-		pw.println("<h1>Hello World</h1><br>"
-				+ "<h2>Hello2</h2><br>"+"<h3>hello3</h3>");
+		pw.println("<h1>Hello World "+ id+ "</h1><br>"
+				);
 	}
 
 	

@@ -10,5 +10,7 @@
 <% for(int i=0;i<5;i++) {%>
 	<h1>Index Hello World</h1>
 	<% } %>
+	
+	<a href="/helloweb/hello?id=kickscar"> 인사하기</a>
 </body>
 </html>

@@ -27,5 +27,7 @@
 	<img src = 'assets/images/뿌듯한쿠로미.jpg' style="width:500px;">
 	<br>
 	<a href="/helloweb/hello">hello로 가기</a>
+	<br>
+	<a href="form.jsp">form로 가기</a>
 </body>
 </html>
