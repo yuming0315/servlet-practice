@@ -31,7 +31,6 @@ public class GuestBookDao {
 				vo.setName(rs.getString(2));
 				vo.setMessage(rs.getString(3));
 				vo.setReg_date(rs.getTimestamp(4));
-				
 				result.add(vo);
 			}
 			
