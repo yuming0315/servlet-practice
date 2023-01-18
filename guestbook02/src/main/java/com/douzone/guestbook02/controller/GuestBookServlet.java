@@ -30,7 +30,7 @@ public class GuestBookServlet extends HttpServlet {
 			vo.setMessage(request.getParameter("message"));
 			
 			new GuestBookDao().insert(vo);
-			response.sendRedirect("/guestbook02/gb");
+			response.sendRedirect(request.getContextPath()+"/gb");
 		}else {
 			List<GuestBookVo> list = new GuestBookDao().findAll();
 			request.setAttribute("list", list);

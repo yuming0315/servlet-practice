@@ -18,13 +18,13 @@
 
 </head>
 <body>
-<script>
+	<script>
 	function onDelete() {
 		<%
 			vo.setPassword(request.getParameter("password"));
 			new GuestBookDao().delete(vo);
 		%>
-		document.location.href = "/guestbook02/gb";
+		document.location.href = "<%=request.getContextPath() %>/gb";
 	}
 </script>
 	<table>
@@ -34,8 +34,8 @@
 			<td><input type="button" value="확인" onclick="onDelete()"></td>
 		</tr>
 	</table>
-	<a href="/guestbook02/gb">메인으로 돌아가기</a>
-	
-	
+	<a href="<%=request.getContextPath() %>/gb">메인으로 돌아가기</a>
+
+
 </body>
 </html>
