@@ -1,10 +1,10 @@
-<%@page import="guestbook01.dao.GuestBookDao"%>
-<%@page import="guestbook01.vo.GuestBookVo"%>
+<%@page import="com.douzone.guestbook.repository.guestbookRepository"%>
+<%@page import="com.douzone.guestbook.vo.guestbookVo"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
-	List<GuestBookVo> list = new GuestBookDao().findAll();
+List<guestbookVo> list = new guestbookRepository().findAll();
 %>
 <html>
 <head>
@@ -12,7 +12,7 @@
 <title>방명록</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath() %>/gb" method="post">
+	<form action="<%=request.getContextPath()%>/gb" method="post">
 		<input type=hidden name="a" value="add">
 		<table border=1 width=500>
 			<tr>
@@ -29,8 +29,10 @@
 			</tr>
 		</table>
 	</form>
-	<% int idx = 1;
-	for(GuestBookVo vo : list){ %>
+	<%
+	int idx = 1;
+		for(guestbookVo vo : list){
+	%>
 	<br>
 	<table width=510 border=1>
 		<tr>

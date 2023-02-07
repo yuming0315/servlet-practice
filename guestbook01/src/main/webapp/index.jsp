@@ -1,9 +1,9 @@
-<%@page import="guestbook01.dao.GuestBookDao"%>
-<%@page import="guestbook01.vo.GuestBookVo"%>
+<%@page import="com.douzone.mysite.dao.GuestBookDao"%>
+<%@page import="com.douzone.mysite.vo.GuestBookVo"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-	List<GuestBookVo> list = new GuestBookDao().findAll();
+List<guestbookVo> list = new guestbookRepository().findAll();
 %>
 <html>
 <head>
@@ -27,8 +27,10 @@
 			</tr>
 		</table>
 	</form>
-	<% int idx = 1;
-	for(GuestBookVo vo : list){ %>
+	<%
+	int idx = 1;
+		for(guestbookVo vo : list){
+	%>
 		<br>
 		<table width=510 border=1>
 			<tr>
